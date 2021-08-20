@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily" # 動作確認したらmonthlyに変える
+      time: "23:30"
+      timezone: "Asia/Tokyo"
+    open-pull-requests-limit: 1
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          ["version-update:semver-minor", "version-update:semver-patch"]
